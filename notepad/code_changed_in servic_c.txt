@@ -1,0 +1,43 @@
+step-1 	make changes in fm_jio_custom_search_acc_services.c
+
+		
+{
+
+        pin_flist_t *cust_rflistp = NULL;
+        /*check error before proceeding*/
+        if (PIN_ERR_IS_ERR(ebufp))
+        {
+                return;
+        }
+        /*clear errorbuf if no error*/
+        PIN_ERR_CLEAR_ERR(ebufp);
+
+        PCM_OP(ctxp, PCM_OP_CUST_FIND, 0, i_flistp, &cust_rflistp, ebufp);
+
+        if (PIN_ERR_IS_ERR(ebufp)) {
+                PIN_ERR_LOG_EBUF(PIN_ERR_LEVEL_ERROR,
+                        "fm_jio_custom_search_acc_services error in calling CUST_FIND", ebufp);
+        }
+
+        PIN_ERR_LOG_FLIST(PIN_ERR_LEVEL_DEBUG,
+                        "fm_jio_custom_search_acc_services return flist", cust_rflistp);
+
+        /*assign the result to Final result Flist*/
+        *o_flistpp = cust_rflistp;
+
+        return;
+}
+
+step-2 run this flist input field
+
+0 PIN_FLD_POID 			POID [0] 0.0.0.1 /account -1 0
+0 PIN_FLD_ARGS			ARRAY [0] allocated 20, used 2
+1 PIN_FLD_ACCOUNT_NO	STR [0] "0.0.0.1-309074"
+
+//we got the output
+
+# number of field entries allocated 20, used 2
+0 PIN_FLD_POID           POID [0] 0.0.0.1 /account -1 0
+0 PIN_FLD_RESULTS       ARRAY [0] allocated 20, used 2
+1     PIN_FLD_POID           POID [0] 0.0.0.1 /account 309074 9
+1     PIN_FLD_ACCOUNT_NO      STR [0] "0.0.0.1-309074"

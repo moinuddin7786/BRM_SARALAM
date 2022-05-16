@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<accounts>
+    <!-- Test 9: Plan with Account Level Product -->
+    <account>
+        <firstname>Moin</firstname>
+        <middlename>ddin</middlename>
+        <lastname>Plan Structure 9</lastname>
+        <company>Oracle</company>
+        <address>123 Main</address>
+        <city>Raleigh</city>
+        <state>NC</state>
+        <zipcode>12345</zipcode>
+        <country>USA</country>
+        <email>ed@oracle.com</email>
+        <parent></parent>
+        <billtype>INV</billtype>
+        <billwhen>3</billwhen>
+        <accountnum>TestPS5</accountnum>
+        <currency>840</currency>
+        <locale>en_US</locale>
+        <plan>GSM - Voice Corporate Branch</plan>
+        <accesscode1>access_code1</accesscode1>
+        <accesscode2></accesscode2>
+        <deal>
+            <name></name>
+            <login>testps5</login>
+            <password>password</password>
+            <sim>0000000000003000201</sim>
+            <tn>0049100072</tn>
+        </deal>
+    </account>
+</accounts>

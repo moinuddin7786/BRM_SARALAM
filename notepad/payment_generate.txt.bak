@@ -1,0 +1,9 @@
+flist
+
+0 PIN_FLD_POID POID [0] 0.0.0.1 /account 653960 0
+0 PIN_FLD_BILLINFO_OBJ POID [0] 0.0.0.1 /billinfo 653704 3
+0 PIN_FLD_PROGRAM_NAME_STR  [0] "pin_bill_accts"
+
+0 PIN_FLD_POID POID [0] 0.0.0.1 /account 653960 0
+0 PIN_FLD_BILLINFO_OBJ POID [0] 0.0.0.1 /billinfo 653704 3
+0 PIN_FLD_PROGRAM_NAME STR [0] "pin_bill_accts"

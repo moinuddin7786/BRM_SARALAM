@@ -1,0 +1,10 @@
+query's
+====================
+select * from billinfo_t where scenario_obj_id0 <> 0;
+select * from service_t where login='moin786';
+select account_obj_id0 from service_t where login='moin786'; --844118
+=================
+0 PIN_FLD_POID           POID [0] 0.0.0.1 /collections_scenario 804495 4
+0 PIN_FLD_AGENT_OBJ      POID [0] 0.0.0.0  /account 844118
+
+and write it: PCM_OP_WRITE_FLDS

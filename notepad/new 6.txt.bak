@@ -1,0 +1,39 @@
+0 PIN_FLD_POID POID [0] 0.0.0.1 /account 12345 0
+
+
+
+Output Flist :
+
+
+
+0 PIN_FLD_POID POID [0] 0.0.0.1 /account 12345 0
+0 PIN_FLD_RESULTS ARRAY [0] allocated 20, used 2
+1 PIN_FLD_POID POID [0] 0.0.0.1 /service/ip 496949 7
+0 PIN_FLD_RESULTS ARRAY [1] allocated 20, used 2
+1 PIN_FLD_POID POID [0] 0.0.0.1 /service/content 527272 7
+
+
+#define JIO_OP_SEARCH_ACC_SERVICE			100001
+
+fm_jio_custom/
+
+
+-rwxr-xr-x 1 pin10 pin 2191 Mar 28 08:20 Makefile*
+-rw-r--r-- 1 pin10 pin 1910 Mar 28 08:29 fm_jio_custom.config
+-rw-r--r-- 1 pin10 pin 4735 Mar 28 08:34 fm_jio_custom_search_acc_service.c
+
+
+struct cm_fm_config fm_jio_custom_config[] = {
+        /* opcode as a u_int, function name (as a string) */
+        { JIO_OP_SEARCH_ACC_SERVICE,            "op_jio_custom_search_acc_service"},
+        { 0,    (char *)0 }
+};
+
+
+
+
+-rwxr-xr-x 1 pin10 pin 1662 Mar 28 08:56 Makefile*
+-rw-r--r-- 1 pin10 pin 1391 Mar 28 08:59 fm_jio_custom.config
+-rw-r--r-- 1 pin10 pin 4810 Mar 28 09:19 fm_jio_custom_search_acc_service.c
+-rwxr-xr-x 1 pin10 pin 3310 Mar 28 09:19 fm_jio_custom.so*
+-rw-r--r-- 1 pin10 pin 2540 Mar 28 09:19 fm_jio_custom_search_acc_service.o

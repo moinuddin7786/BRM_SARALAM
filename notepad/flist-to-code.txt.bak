@@ -1,0 +1,40 @@
+input flist
+============
+0 PIN_FLD_POID POID [0] 0.0.0.1 /search -1 0
+0 PIN_FLD_FLAGS INT [0] 256
+0 PIN_FLD_TEMPLATE STR [0] "select X from /account where F1 = V1 "
+0 PIN_FLD_ARGS ARRAY [1] allocated 20, used 1
+1 PIN_FLD_POID POID [0] 0.0.0.1 /account 309074 0
+0 PIN_FLD_RESULTS ARRAY [0] allocated 20, used 3
+1 PIN_FLD_NAMEINFO ARRAY [*] allocated 20, used 2
+2 PIN_FLD_FIRST_NAME STR [0] " "
+2 PIN_FLD_LAST_NAME STR [0] " "
+
+Code
+=====
+in_flistp = PIN_FLIST_CREATE(ebufp);
+template = "select X from /account where F1 = V1"
+objp = PIN_POID_CREATE(database, "/search", id, ebufp);
+PIN_FLIST_FLD_SET(in_flistp, PIN_FLD_POID, (void *)objp, ebufp);
+PIN_FLIST_FLD_SET(in_flistp, PIN_FLD_TEMPLATE, template, ebufp);
+
+/******************PIN_FLD_RESULTS******************************/
+PIN_FLIST_FLD_SET(in_flistp, (void *) NULL , PIN_FLD_RESULTS, -1, ebufp);
+
+/********PIN_FLD_FIRST_NAME***********/
+a_flist PIN_FLIST_ELEM_ADD(flist, PIN_FLD_ARGS, 1, ebufp);
+nameifno_flistp = PIN_FLIST_ELEM_ADD(a_flist, PIN_FLD_NAMEINFO, PIN_FLD_ANY, ebufp);
+PIN_FLIST_FLD_SET(nameifno_flistp, PIN_FLD_FIRST_NAME, "MOIN" ebufp);
+
+/**********PIN_FLD_LAST_NAME**************/
+
+a_flist PIN_FLIST_ELEM_ADD(flist, PIN_FLD_ARGS, 1, ebufp);
+nameifno_flistp = PIN_FLIST_ELEM_ADD(a_flist, PIN_FLD_NAMEINFO, PIN_FLD_ANY, ebufp);
+PIN_FLIST_FLD_SET(nameifno_flistp, PIN_FLD_LAST_NAME, "UDDIN" ebufp);
+ 
+PIN_FLIST_ELEM_ADD(
+                 pin_flist_t     *flistp,
+                 pin_fld_num_t    fld,
+                 v_int32          elem_id,
+                 pin_errbuf_t    *ebufp);
+

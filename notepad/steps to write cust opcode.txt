@@ -1,0 +1,13 @@
+steps to write cutsom op code
+================================
+0) Keep all the opcodes and thier input flists and output flists ready in a notepad ++
+1) Decide the name and number of the opcode ( Parse the .h file so that applications like testnap recognizes the name)
+2) Decide whether new directory structure to be created or add opcode in the existing directory ( new directory -- > new .so to be added in pin.conf)
+3) .c file , config file entry for the opcode name and function mapping
+====================================================
+0 PIN_FLD_POID POID [0] 0.0.0.1 /account 748509 0
+====================================================
+Directory : 	fm_jio_cust
+Input flist :	0 PIN_FLD_POID POID [0] 0.0.0.1 /account 81810 0
+Opcode :		JIO_OP_CUST_COMBINE_NAME
+Output Flist :

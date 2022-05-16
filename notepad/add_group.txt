@@ -1,0 +1,52 @@
+=====================================================
+search template for searching group if exsist or not :
+---------------------------------------------
+0 PIN_FLD_POID POID [0] 0.0.0.1 /search -1 0
+0 PIN_FLD_TEMPLATE STR [0] "select X from /group where F1 = V1 "
+0 PIN_FLD_FLAGS INT [0] 256
+0 PIN_FLD_ARGS ARRAY [1] allocated 20, used 1
+1 PIN_FLD_PARENT POID [0] 0.0.0.1 /account 821204 0
+0 PIN_FLD_RESULTS ARRAY [*] allocated 20, used 2
+
+========================================================
+input flist for PCM_OP_GROUP_CREATE_GROUP
+-------------------------------------
+0 PIN_FLD_POID POID [0] 0.0.0.1 /group/billing -1 0
+0 PIN_FLD_NAME STR [0] "Billing group"
+0 PIN_FLD_STATUS ENUM [0] 10100
+0 PIN_FLD_TYPE_STR STR [0] "Billing group"
+0 PIN_FLD_PARENT POID [0] 0.0.0.1 /account 821204 7
+
+
+
+output flist for PCM_OP_GROUP_CREATE_GROUP
+---------------------------------
+# number of field entries allocated 20, used 2
+0 PIN_FLD_POID POID [0] 0.0.0.1 /group/billing 818677 0
+0 PIN_FLD_RESULTS ARRAY [0] allocated 20, used 2
+1 PIN_FLD_ACCOUNT_OBJ POID [0] 0.0.0.1 /account 821204 7
+1 PIN_FLD_POID POID [0] 0.0.0.1 /event/group/parent 285415626385421301 0
+
+
+
+================================================
+
+input flist for PCM_OP_GROUP_ADD_MEMBER
+--------------
+0 PIN_FLD_POID POID [0] 0.0.0.1 /group/billing 818677 0
+0 PIN_FLD_PROGRAM_NAME STR [0] "Testnap"
+0 PIN_FLD_MEMBERS ARRAY [1] allocated 20, used 1
+1 PIN_FLD_OBJECT POID [0] 0.0.0.1 /account 309074 7
+
+
+
+output flist for PCM_OP_GROUP_ADD_MEMBER
+---------------
+0 PIN_FLD_POID POID [0] 0.0.0.1 /account 821204 7
+0 PIN_FLD_RESULTS ARRAY [0] allocated 20, used 2
+1 PIN_FLD_ACCOUNT_OBJ POID [0] 0.0.0.1 /account 821204 7
+1 PIN_FLD_POID POID [0] 0.0.0.1 /event/group/member 285415626385425895 0
+
+
+
+========================================================

@@ -1,0 +1,39 @@
+0 PIN_FLD_SCENARIO_INFO SUBSTRUCT [0] allocated 20, used 7
+1     PIN_FLD_CONFIG_PROFILE_OBJ   POID [0] 0.0.0.1 /config/collections/profile/default 801 0
+1     PIN_FLD_ENTRY_AMOUNT DECIMAL [0] 100
+1     PIN_FLD_ENTRY_DAYS      INT [0] 5
+1     PIN_FLD_EXIT_AMOUNT  DECIMAL [0] 60
+
+
+0 PIN_FLD_SCENARIO_INFO SUBSTRUCT [0] allocated 20, used 7
+1     PIN_FLD_CONFIG_PROFILE_OBJ   POID [0] 0.0.0.1 /config/collections/profile/default 801 0
+1     PIN_FLD_ENTRY_AMOUNT DECIMAL [0] 50
+1     PIN_FLD_ENTRY_DAYS      INT [0] 10
+1     PIN_FLD_EXIT_AMOUNT  DECIMAL [0] 10
+
+0 PIN_FLD_POID POID [0] 0.0.0.1 /config/collections/scenario 314787 0
+0 PIN_FLD_SCENARIO_INFO SUBSTRUCT [0] allocated 20, used 7
+1 PIN_FLD_CONFIG_PROFILE_OBJ   POID [0] 0.0.0.1 /config/collections/profile/default 801 0
+1 PIN_FLD_ENTRY_AMOUNT DECIMAL [0] 10
+1 PIN_FLD_EXIT_AMOUNT DECIMAL [0] 5
+
+
+ Input flist of COLLECTIONS_PROCESS_BILLINFO
+# number of field entries allocated 20, used 5
+0 PIN_FLD_PROGRAM_NAME    STR [0] "pin_collections_process"
+0 PIN_FLD_PROCESSING_TIME    INT [0] 0
+0 PIN_FLD_POID           POID [0] 0.0.0.1 /account 799476 0
+0 PIN_FLD_BILLINFO_OBJ   POID [0] 0.0.0.1 /billinfo 799220 7
+0 PIN_FLD_SCENARIO_OBJ   POID [0] 0.0.0.0  0 0
+
+
+1     PIN_FLD_CONFIG_PROFILE_OBJ   POID [0] 0.0.0.1 /config/collections/profile/default 801 0
+
+
+0 PIN_FLD_POID POID [0] 0.0.0.1 /config/collections/scenario 314787 0
+0 PIN_FLD_SCENARIO_INFO SUBSTRUCT [0] allocated 20, used 7
+1 PIN_FLD_CONFIG_PROFILE_OBJ POID [0] 0.0.0.1 /config/collections/profile/default 801 0
+1 PIN_FLD_ENTRY_AMOUNT DECIMAL [0] 10
+1 PIN_FLD_EXIT_AMOUNT DECIMAL [0] 5
+
+select * from billinfo_t where account_obj_id0= 799476;
