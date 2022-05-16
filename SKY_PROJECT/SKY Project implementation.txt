@@ -1,0 +1,44 @@
+SKY Project implementation
+
+Customer and Contract Management
+
+Develop a wrapper opcode to create a customer account (per contract) with custom profile object 
+Inputs:
+	Customer Name info
+	Customer Address
+	Account No (contractId)
+	profile data
+		customerId (CMR customerId)
+		OrderType (SKY/GLASS/DAZN)
+
+Result:
+	create customer account in inactive state without a payinfo in BRM
+
+
+Payment method management
+	Develop a custom opcode to set/add a payinfo (cc/dd/sepa) object to a customer account
+	Input:
+		Payinfo 
+		account poid
+	Result:
+	customer status should be changed to active
+	payinfo object should be added to account
+
+Use dm_fusa with simulator for payments
+
+
+Order & Subscription Management
+
+develop a new opcode to purchase one or more bundles with given activation date
+
+Input:
+	Account poid
+	array of bundles with activation date
+
+Result:
+	bundles should be purchased and cycle/purchase date should be set as per input
+	BDOM should be changed to current date
+
+
+Run billing
+Run collections

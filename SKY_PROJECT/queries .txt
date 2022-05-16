@@ -1,0 +1,5 @@
+select * from profile_sky_t;
+
+select * from dd_object_t where obj_id0 = ;
+
+select * from 

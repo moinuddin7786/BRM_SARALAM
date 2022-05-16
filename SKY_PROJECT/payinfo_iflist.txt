@@ -1,0 +1,17 @@
+0 PIN_FLD_POID POID [0] 0.0.0.1 /payinfo -1 0
+0 PIN_FLD_ACCOUNT_OBJ POID [0] 0.0.0.1 /account 1063888 0
+0 PIN_FLD_PAY_TYPE ENUM [0] 10001
+0 PIN_FLD_INVOICE_OBJ    POID [0] 0.0.0.1 /invoice -1 0
+0 PIN_FLD_FIELD_NAME STR [0] "PIN Payinfo Object"
+0    PIN_FLD_INHERITED_INFO SUBSTRUCT [0] allocated 20, used 1
+1         PIN_FLD_INV_INFO      ARRAY [0] allocated 20, used 10
+2             PIN_FLD_DELIVERY_PREFER   ENUM [0] 0
+2             PIN_FLD_NAME            STR [0] "Moinuddin Plan Structure 9"
+2             PIN_FLD_INV_TERMS      ENUM [0] 0
+2             PIN_FLD_DELIVERY_DESCR    STR [0] "ed@oracle.com"
+2             PIN_FLD_EMAIL_ADDR      STR [0] "ed@oracle.com"
+2             PIN_FLD_COUNTRY         STR [0] "USA"
+2             PIN_FLD_ZIP             STR [0] "12345"
+2             PIN_FLD_STATE           STR [0] "NC"
+2             PIN_FLD_CITY            STR [0] "Raleigh"
+2             PIN_FLD_ADDRESS         STR [0] "123 Main"
