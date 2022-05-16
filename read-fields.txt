@@ -1,0 +1,18 @@
+reading fields
+step-1:	CD $PIN_HOME
+step-1:	CD sys/test
+step-3:	vi fldlist
+step-4:	copy the field's and save with put space.(esc then :wq for exit)
+step-5:	cat fldlist
+step-6:	testnap
+	r fldlist 1
+	rflds 1
+
+output
+# number of field entries allocated 20, used 5
+0 PIN_FLD_POID           POID [0] 0.0.0.1 /account 1 1
+0 PIN_FLD_NAME            STR [0] "Brand Host"
+0 PIN_FLD_CREATED_T    TSTAMP [0] (1329919847) Wed Feb 22 06:10:47 2012
+0 PIN_FLD_MOD_T        TSTAMP [0] (1329919848) Wed Feb 22 06:10:48 2012
+0 PIN_FLD_AAC_ACCESS      STR [0] ""
+p
